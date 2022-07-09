@@ -1,15 +1,10 @@
 import React from "react";
 
-const Hero = () => (
+const Hero = ({ title, children }) => (
   <div>
     <div>
-      <h1>Ganhe sua liberdade para ir e vir</h1>
-      <ul>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-      </ul>
-      <button>Matricule-se agora!</button>
+      <h1>{title}</h1>
+      {children}
     </div>
   </div>
 );
