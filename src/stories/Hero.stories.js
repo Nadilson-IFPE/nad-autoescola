@@ -9,22 +9,20 @@ export default {
 };
 
 export const usage = () => (
-  <Hero title="Ganhe sua liberdade para ir e vir" image={BGEstradaImage}>
+  <Hero image={BGEstradaImage}>
+    <h1>Ganhe sua liberdade para ir e vir</h1>
     <p>A sua autoescola líder em aprovação</p>
   </Hero>
 );
 
 export const withList = () => (
   <>
-    <Hero
-      title={
-        <span>
-          Ganhe sua <strong>liberdade</strong>
-          <br /> para ir e vir
-        </span>
-      }
-      image={BGCarImage}
-    >
+    <Hero image={BGCarImage}>
+      <h1>
+        Ganhe sua <strong>liberdade</strong>
+        <br /> para ir e vir
+      </h1>
+
       <ul>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
