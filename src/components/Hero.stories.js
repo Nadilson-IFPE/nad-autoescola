@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import BGEstradaImage from "../stories/assets/bg-estrada.jpg";
 import BGCarImage from "../stories/assets/bg-cars.jpg";
 import Heading from "./Heading";
+import { text } from "@storybook/addon-knobs";
 
 export default {
   title: "Components/Hero",
@@ -11,8 +12,8 @@ export default {
 
 export const usage = () => (
   <Hero image={BGEstradaImage}>
-    <h1>Ganhe sua liberdade para ir e vir</h1>
-    <p>A sua autoescola líder em aprovação</p>
+    <h1>{text("Title", "Ganhe sua liberdade para ir e vir")}</h1>
+    <p>{text("Text", "A sua autoescola líder em aprovação")}</p>
   </Hero>
 );
 
