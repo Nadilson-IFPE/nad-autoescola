@@ -1,7 +1,7 @@
 import React from "react";
 
 export default {
-  title: "Welcome",
+  title: "Introduction/Welcome",
 };
 
 export const toAutoEscolaNadilson = () => (
