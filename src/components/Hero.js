@@ -1,11 +1,15 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { breakAt, BreakpointSize } from "./Breakpoints";
 
 const Root = styled.div`
+  color: #fff;
+  padding: 100px 0;
   ${(props) => css`
     background: url(${props.image}), rgba(0, 0, 0, 0.4);
     background-size: cover;
     background-position: center;
+    background-blend-mode: overlay;
   `}
 `;
 
@@ -33,12 +37,27 @@ const Content = styled.div`
   }
 `;
 
+const Container = styled.div`
+  width: 100%;
+  padding: 0 8px;
+
+  ${breakAt(BreakpointSize.sm)} {
+    padding: 0 16px;
+  }
+
+  ${breakAt(BreakpointSize.lg)} {
+    width: 1140px;
+    padding: 0;
+    margin: 0 auto;
+  }
+`;
+
 const Hero = ({ image, title, children }) => (
   <Root image={image}>
-    <div>
+    <Container>
       <Title>{title}</Title>
       <Content>{children}</Content>
-    </div>
+    </Container>
   </Root>
 );
 

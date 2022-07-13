@@ -15,11 +15,13 @@ export const usage = () => (
 );
 
 export const withList = () => (
-  <Hero title="Ganhe sua liberdade para ir e vir" image={BGCarImage}>
-    <ul>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-    </ul>
-  </Hero>
+  <>
+    <Hero title="Ganhe sua liberdade para ir e vir" image={BGCarImage}>
+      <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+      </ul>
+    </Hero>
+  </>
 );
