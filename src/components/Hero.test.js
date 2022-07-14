@@ -13,3 +13,12 @@ test("renders Hero with children", () => {
 
   expect(screen.getByText("Nadilson José")).toBeInTheDocument();
 });
+
+test("renders image background", () => {
+  const image = "http://test/image.jpg";
+  render(<Hero image={image} />);
+
+  expect(screen.getByTestId("hero")).toHaveStyleRule({
+    backgroundImage: image,
+  });
+});
