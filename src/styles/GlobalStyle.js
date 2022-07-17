@@ -1,8 +1,10 @@
+import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { breakAt, BreakpointSizes } from "./Breakpoints";
+import { Helmet } from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap");
 
 html {
     font-family: "Poppins", sans-serif;
@@ -82,4 +84,16 @@ h6 {
 }
 `;
 
-export default GlobalStyle;
+const GlobalStyleComposed = () => (
+  <>
+    <GlobalStyle />
+    <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
+  </>
+);
+
+export default GlobalStyleComposed;
